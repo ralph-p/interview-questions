@@ -1,0 +1,11 @@
+Problem:
+    Given an array of meeting time intervals [start,finish] determine if a person could attend all the meetings
+
+Solution:
+    Put the start and end times in two seperate sorted arrays
+    for index = 1 < startsArr - 1:
+        if startsArr[index + 1] < endArr[index]:
+            return false
+    
+    Time: O(N log N) because of sorting
+    Space: O(n) because of the starts and ends array

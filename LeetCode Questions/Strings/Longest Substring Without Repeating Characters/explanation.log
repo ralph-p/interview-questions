@@ -1,0 +1,15 @@
+Problem:
+Given a string, find the length of the longest substring without repeating characters.
+
+Solution:
+Use the sliding window technique to keep track of the max length. This will complete in O(n) time
+    create an empty hashMap(key/val -> character/index)
+    create a starting point and a max length, both set to zero
+
+    for each character in string:
+        if character is in the Hashmap and the index is >= the start:
+            Set start to the index found in the hashMap + 1
+        set the hashMap to the current character/index 
+        if current max length is less than current window set it to the current window
+
+    return max

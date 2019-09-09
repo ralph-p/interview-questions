@@ -1,0 +1,14 @@
+Problem:
+    Given two strings s and t , write a function to determine if t is an anagram of s.
+
+Solution:
+    compare lengths of both string, if they're not the same return false
+    create empty hash table
+    loop through the first string:
+        map all the letters to the hash table, counting the number of letters
+    loop through the second string:
+        if the letter isn't in the hash table
+            return false
+        if the letter is in the hashtable and it's greater than zero, decrease the letter count in the hash table 
+    Time: O(n)
+    Space: O(1) the hash table will have 26 key-value pairs at the most

@@ -1,0 +1,15 @@
+Problem:
+    Given an array of non-negative integers, you are initially positioned at the first index of the array.
+    Each element in the array represents your maximum jump length at that position.
+    Determine if you are able to reach the last index.
+
+Solution:
+    Create a second DP array that has true or false values to see if that element can be reached or not.
+    Create a I and J variable as pointers
+    If it's possible to reach the Ith step, AND the Ith step can jump to the Jth step, set the J'th steps DP value to true on the second array
+    Else, keep the Jth step DP value as false
+    Return the last value in the DP array to see if the last step is reachable
+
+    Time: O(n ^ 2) because of two nested loops
+
+    Space: O(n) because of the DP array with the same size as the input

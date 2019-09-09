@@ -1,0 +1,13 @@
+Problem:
+    Reverse a singly linked list.
+
+Solution:
+    Create a Prev and current variable. 
+    Prev = Null
+    Current = head of LL
+
+    loop through the LL
+        Make current node.next point to Prev
+        move them both up by 1
+Time: O(n) we go through the LL at least once
+Space: O(c) we are only using a previous and current pointer

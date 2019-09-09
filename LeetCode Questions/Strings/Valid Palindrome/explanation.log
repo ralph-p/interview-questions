@@ -1,0 +1,13 @@
+Problem:
+Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.
+
+Solution:
+    Each sequence of letters is a half mirror of each other
+    Works for both even and odd characters
+
+    create left and right pointer, one for the start and one for the end of the string
+    If the left and right match, move the pointers in one character. 
+    If they don't match it's not a palindrome
+
+    Time: O(n)
+    Space: O(1) left and right pointers take up constant space

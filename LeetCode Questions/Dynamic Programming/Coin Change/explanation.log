@@ -1,0 +1,15 @@
+Problem:
+    You are given coins of different denominations and a total amount of money amount. 
+    Write a function to compute the fewest number of coins that you need to make up that amount. 
+    If that amount of money cannot be made up by any combination of the coins, return -1.
+
+Solution: 
+    dp array of len amount + 1 
+    each value represents the min number of coins needed to reach that amount
+
+    for i = 1 to len dp array
+        for c in coins
+            min(dpArr[i-c] + c or dpArr[i])
+
+    Time: O(A * C) where a is the amount we need to reach and C is the number of coins
+    Space: O(A) since we created a DP array of length A

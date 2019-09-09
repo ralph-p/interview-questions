@@ -1,0 +1,11 @@
+Problem:
+    Given a linked list, remove the n-th node from the end of list and return its head.
+
+Solution:
+    Create two pointers, called fast and slow. 
+    Loop through the linked list, making sure fast is always N spaces ahead of slow. 
+    When fast reaches the end of the list, the slow variable will now be N spaces from the end
+    Make slow.next point to two nodes ahead of it, dropping the Nth node in the list
+
+    Time: O(n) we go through the list at least once
+    Space: O(c) we always use two pointer nodes regardless of Linked List size

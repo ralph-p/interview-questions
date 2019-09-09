@@ -1,0 +1,8 @@
+Problem:
+    Merge two sorted linked lists and return it as a new list. The new list should be made by splicing together the nodes of the first two lists.
+Solution:
+    create a dummy head node
+    create a current pointer, pointing to which ever linked list has the smaller head variable. 
+    Then just check each linked list and point dummy head next to the smaller of the two
+Time: O(n + m) where N and M are lengths of the Linked lists
+Space: O(c) we always use three nodes regardless of the size of the Linked List

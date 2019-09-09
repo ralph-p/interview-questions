@@ -1,0 +1,9 @@
+Problem:
+Given an array of strings, group anagrams together.
+
+Solution:
+    Words that are anagrams of each other will be the same word if their letters are sorted Alphabetically 
+    So to solve this, sort each word and compare them
+
+    Time: O(N K log K) where N is the number of Strings and K is the length of strings
+    Space: O(N K) data is stored in the grouped hash table

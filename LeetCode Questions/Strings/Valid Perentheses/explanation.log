@@ -1,0 +1,23 @@
+Question:
+Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+
+    Open brackets must be closed by the same type of brackets.
+    Open brackets must be closed in the correct order.
+
+Note that an empty string is also considered valid.
+
+Solution:
+
+create empty stack
+
+for char in string:
+    if it's an open bracket 
+        push to stack
+    else if  pop the stack & it's not the same as char
+        return false 
+
+return true if the length of the stack is zero, false if not
+
+Time is O(n)

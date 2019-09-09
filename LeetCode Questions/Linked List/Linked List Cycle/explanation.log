@@ -1,0 +1,13 @@
+Problem:
+    Given a linked list, determine if it has a cycle in it.
+    To represent a cycle in the given linked list, we use an integer pos which represents the position (0-indexed)
+    in the linked list where tail connects to. If pos is -1, then there is no cycle in the linked list.
+
+Solution:
+    Create a slow and fast variable that are set to the head of the Linked list
+    Iterate through the Linked list, slow will move up 1 node and fast will move up 2 nodes
+    If LL is circular, slow and fst will eventually be equal
+    if LL is not circular, Fast will just traverse to the second to last or last node of the LL
+
+Time: O(N) we go through the list at least once
+Space: O(c) we always use two nodes (fast and slow) regardless of the size of the linked list

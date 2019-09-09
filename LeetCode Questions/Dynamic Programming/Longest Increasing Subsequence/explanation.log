@@ -1,0 +1,18 @@
+Problem:
+    Given an unsorted array of integers, find the length of longest increasing subsequence.
+
+Solution:
+    Create a DP array, same length as the input array.
+    This will be the longest increasing subsequence at that index, they will all be initilized to 1
+    Use I and J pointers
+
+    dpArr = 1 for len nums
+    currentMax = 1
+    for j = 1 < len array 
+        for i = 0 < j
+            nums[j] grater than nums[i]?
+                dpArr[j] = max of dpArr[i] + 1 or dpArr[j]
+        currentMax = max of currentMax and dpArr[j]
+
+    time: O(n ^ 2) we do up to n work for all n elements. Two for loops
+    Space: O(n) store the DP array 

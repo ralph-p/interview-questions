@@ -1,0 +1,36 @@
+Problem:
+    Given a matrix of m x n elements (m rows, n columns), return all elements of the matrix in spiral order.
+    Input:
+        [
+        [ 1, 2, 3 ],
+        [ 4, 5, 6 ],
+        [ 7, 8, 9 ]
+        ]
+    Output: [1,2,3,6,9,8,7,4,5]
+Solution:
+    Set Top = 0, Bottom = m, Left = 0, Right = n  
+    Set direction to right
+    Set spiralArray to null
+    while top <= bottom and left <= right:
+        if right:
+            for left till right:
+                push elements to spiralArray
+            top ++
+            direction = down
+        elif down:
+            for top till bottom:
+                push the elements to spiralArray
+            right --
+            direction = left
+        elif left:
+            for right till left:
+                push elements to spiralArray
+            bottom --
+            direction = up
+        elif up:
+            for bottom to top:
+                push the elements to spiralArray
+            left ++
+            direction = right
+Time: O(n x M) the dimentions of the matrix
+Space: O(n) the result array

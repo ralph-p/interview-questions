@@ -1,0 +1,17 @@
+Problem:
+    You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed, 
+    the only constraint stopping you from robbing each of them is that adjacent houses have security system connected and 
+    it will automatically contact the police if two adjacent houses were broken into on the same night.
+    Given a list of non-negative integers representing the amount of money of each house,
+    determine the maximum amount of money you can rob tonight without alerting the police.
+
+Solution:
+    if it's just one house, return that house
+    If it's two, return the max number
+    Max loot at Nth house:
+        Loot at Nth house + loot from Nth - 2 house
+        OR
+        Max loot from Nth - 1 house
+
+    Time: O(n) since it needs to go through the array at least once
+    Space: O(n) but it can be O(c) if we use two variables instead of an array to store the values

@@ -1,0 +1,12 @@
+Problem:
+    A robot is located at the top-left corner of a m x n grid
+    The robot can only move either down or right at any point in time. The robot is trying to reach the bottom-right corner of the grid 
+    How many possible unique paths are there?
+
+Solution:
+    Create a DP matrix with the size m x n, first row and col are all ones because there's only one way to get there
+    Add numbers from the cell above and the cell to the left to get the current number of paths
+    Fill the matrix in till you get to the bottom right
+
+    Time: O(n x m) because it needs to loop through the entire matrix
+    Space: O(n x m) because it depends on the size of the matrix
