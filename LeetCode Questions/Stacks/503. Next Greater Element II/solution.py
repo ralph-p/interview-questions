@@ -1,5 +1,5 @@
 class Solution(object):
-    def nextGreaterElements(self, nums):
+    def nextGreaterElements_1(self, nums):
         """
         :type nums: List[int]
         :rtype: List[int]
@@ -24,7 +24,32 @@ class Solution(object):
                     current_index += 1
             c_a.append(gt)
         return c_a
-
+    def nextGreaterElements(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[int]
+        """
+        next_greater = []
+        for i,n in enumerate(nums):
+            gt = []
+            passed = False
+            for x in range(len(nums)):
+                if x == i:
+                    passed = True
+                    continue
+                if nums[x] > n:
+                    if passed:
+                        gt = [nums[x]]
+                        break
+                    else:
+                        gt.append(nums[x])
+            if len(gt) == 0:
+                next_greater.append(-1)
+            else:
+                next_greater.append(gt[0])
+        return next_greater
         
-nums = [1,2,1]
+        
+nums = [5,4,3,2,1]
+# [-1,5,5,5,5]
 print(Solution().nextGreaterElements(nums))
